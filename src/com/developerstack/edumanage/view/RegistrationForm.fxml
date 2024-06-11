@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="185.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developerstack.edumanage.controller.RegistrationFormController">
+   <children>
+      <Label layoutX="13.0" layoutY="19.0" prefHeight="27.0" prefWidth="183.0" text="New Registration" textFill="#3c3633">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="47.0" prefHeight="7.0" prefWidth="496.0" />
+      <Button layoutX="432.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToHomeOnAction" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #3C3633;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtId" editable="false" layoutX="20.0" layoutY="65.0" prefHeight="29.0" prefWidth="124.0" promptText="Registration ID">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtStudent" layoutX="155.0" layoutY="65.0" prefHeight="29.0" prefWidth="162.0" promptText="Student (search here)">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn" layoutX="356.0" layoutY="136.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="29.0" prefWidth="147.0" style="-fx-background-color: #3C3633;" text="Save Registration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="cmbProgram" layoutX="329.0" layoutY="65.0" prefHeight="29.0" prefWidth="175.0" promptText="Program" />
+      <Label layoutX="20.0" layoutY="103.0" prefHeight="27.0" prefWidth="115.0" text="Payment State" textFill="#3c3633">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rBtnPaid" layoutX="128.0" layoutY="108.0" mnemonicParsing="false" text="Paid">
+         <toggleGroup>
+            <ToggleGroup fx:id="payment" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rBtnPending" layoutX="196.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="Pending" toggleGroup="$payment" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="235.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developerstack.edumanage.controller.CodeVerificationFormController">
+   <children>
+      <Label layoutX="88.0" layoutY="30.0" prefHeight="27.0" prefWidth="149.0" text="Verify your email" textFill="#3c3633">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="57.0" prefHeight="0.0" prefWidth="279.0" />
+      <TextField fx:id="txtCode" layoutX="24.0" layoutY="131.0" prefHeight="29.0" prefWidth="279.0" promptText="Code">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="24.0" layoutY="172.0" mnemonicParsing="false" onAction="#veryfiCodeOnAction" prefHeight="29.0" prefWidth="279.0" style="-fx-background-color: #3C3633;" text="Verify" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="txtSelectedEmail" layoutX="23.0" layoutY="70.0" prefHeight="27.0" prefWidth="279.0" text="sample@gmail.com" textFill="#3c3633">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="23.0" layoutY="97.0" onAction="#changeEmailOnAction" text="Change" underline="true" />
+   </children>
+</AnchorPane>

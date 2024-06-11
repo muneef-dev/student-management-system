@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="534.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developerstack.edumanage.controller.ProgramFormController">
+   <children>
+      <Label layoutX="13.0" layoutY="19.0" text="Program Management" textFill="#3c3633">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="47.0" prefHeight="7.0" prefWidth="652.0" />
+      <Button layoutX="589.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToHomeOnAction" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #3C3633;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="460.0" layoutY="10.0" mnemonicParsing="false" onAction="#newProgramOnAction" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #3C3633;" text="+ New Program" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtTechnology" layoutX="20.0" layoutY="104.0" onAction="#addTechOnAction" prefHeight="29.0" prefWidth="248.0" promptText="Technology">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="140.0" layoutY="65.0" prefHeight="29.0" prefWidth="172.0" promptText="Program Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCost" layoutX="326.0" layoutY="65.0" prefHeight="29.0" prefWidth="134.0" promptText="Cost">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearch" layoutX="19.0" layoutY="288.0" prefHeight="29.0" prefWidth="509.0" promptText="Search">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn" layoutX="544.0" layoutY="288.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #3C3633;" text="Save Program" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblPrograms" layoutX="19.0" layoutY="330.0" prefHeight="186.0" prefWidth="640.0">
+         <columns>
+            <TableColumn fx:id="colCode" prefWidth="65.0" text="# Code" />
+            <TableColumn fx:id="colProgram" prefWidth="104.0" text="Program Name" />
+            <TableColumn fx:id="colTeacher" prefWidth="162.0" text="Teacher" />
+            <TableColumn fx:id="colTech" prefWidth="136.0" text="Technology" />
+            <TableColumn fx:id="colCost" prefWidth="96.0" text="Cost" />
+            <TableColumn fx:id="colOption" prefWidth="76.0" text="Options" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtId" editable="false" layoutX="20.0" layoutY="65.0" prefHeight="29.0" prefWidth="109.0" promptText="Program ID">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cmdTeacher" layoutX="472.0" layoutY="65.0" prefHeight="29.0" prefWidth="192.0" promptText="Teacher" />
+      <TableView fx:id="tblTechnologies" layoutX="19.0" layoutY="140.0" prefHeight="132.0" prefWidth="640.0">
+         <columns>
+            <TableColumn fx:id="colTCode" prefWidth="65.0" text="# ID" />
+            <TableColumn fx:id="colTName" prefWidth="495.0" text="Technology" />
+            <TableColumn fx:id="colTRemove" prefWidth="79.0" text="Remove" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
